@@ -1,10 +1,10 @@
 {
-  "name": "p2-db",
+  "name": "p2db",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Francesco Scassillo",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
