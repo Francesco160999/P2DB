@@ -7,13 +7,13 @@ export class TransactionController {
 
     constructor(private readonly transactionService: TransactionService) { }
 
-    @Post('/create')
+    @Post('create')
     createTransaction(@Body() transaction: ITransaction){
         return this.transactionService.createTransaction(transaction);
     }
 
     @Get()
-    getTransaction(@Param('hash') hash: string): ITransaction{
-        return 
+    async getTransaction(@Param('hash') hash: string): Promise<ITransaction>{
+        return await this.transactionService.getTransaction(hash);
     }
 }

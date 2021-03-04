@@ -12,5 +12,5 @@ export interface ITransaction {
     recepient: string;
     protocol: any;
     body: any;
-    signature: string; //ISignature;
+    signature: string;
 }
