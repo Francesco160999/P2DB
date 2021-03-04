@@ -1,3 +1,4 @@
+import { TransactionService } from './database/transaction/transaction.service';
 import { TransactionController } from './database/transaction/transaction.controller';
 import { PeerModule } from './peer/peer.module';
 import { PeerService } from './peer/peer.service';
@@ -13,6 +14,7 @@ import { AppService } from './app.service';
         TransactionController, 
         PeerController, AppController],
   providers: [
+        TransactionService, 
         PeerService, AppService],
 })
 export class AppModule {}

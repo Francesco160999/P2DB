@@ -14,8 +14,3 @@ export interface ITransaction {
     body: any;
     signature: string; //ISignature;
 }
-/*
-export interface ISignature {
-    previusHashes: string[];
-    signature: string;
-}*/
