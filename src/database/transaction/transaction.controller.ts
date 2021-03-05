@@ -12,7 +12,7 @@ export class TransactionController {
         return this.transactionService.createTransaction(transaction);
     }
 
-    @Get()
+    @Get(':hash')
     async getTransaction(@Param('hash') hash: string): Promise<ITransaction>{
         return await this.transactionService.getTransaction(hash);
     }
