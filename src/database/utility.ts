@@ -2,11 +2,11 @@ import { fstat } from "fs";
 import { ITransaction } from "./transaction/transaction.interface";
 import { writeFile } from 'fs';
 import { createHash } from 'crypto';
+import * as config from './config.json';
 
 /*
 * 04/03/2021 the Utility class is an agglomerate of concepts that has to be separated
 */
-var config = require("./config.json");
 
 export class Utilty {
     

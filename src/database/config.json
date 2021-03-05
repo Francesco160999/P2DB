@@ -1,7 +1,7 @@
 {
     "paths": {
         "data": "../data",
-        "nodeList": "../data/nodes.list.json",
+        "nodesList": "../data/nodes.list.json",
         "transactionsPath": "../data/hashes/"
     }
 }
