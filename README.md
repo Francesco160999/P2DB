@@ -11,10 +11,10 @@ the name is a provisional name, meanwhile thinking a good one :)
 # Transaction protocols
 The transaction protocol (or transaction header) is a string that describe the propose of the transaction.
  > es. CLEAR#HTML
- > CLEAR is the type of encyption, CLEAR mean that is "free to read".
- > HTML is the type of content in the body transaction, this tell to the client that have to render as an HTML
+ - CLEAR is the type of encyption, CLEAR mean that is "free to read".
+ - HTML is the type of content in the body transaction, this tell to the client that have to render as an HTML
 Other examples:
  > es. RSA512#TEXT#MSG
- > RSA512 mean that is RSA encripted
- > TEXT mean that the body is a plain text (as described before, RSA encipted)
- > MSG is an additinal aribtrary infomarion
+ - RSA512 mean that is RSA encripted
+ - TEXT mean that the body is a plain text (as described before, RSA encipted)
+ - MSG is an additinal aribtrary infomarion
