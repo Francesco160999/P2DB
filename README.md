@@ -1,3 +1,6 @@
-# P2DB
-A very democratic server-less document-oriented database, where the user is the only owner of a content in the database shared with others. The database could have also a centralized authority in order to validate content in an enterprise contest.
-The technological concept behind the system is to have horizontally infinitly scalable database without care about system configurations and compatiblity as the database run on the V8 engine of Chromium (Node.JS).
+# Working in progres
+The current project is currently under developlment, if you want to known more about this project or you want to contribute contact me.
+I would very appreciete advice and proposal, thank you!
+
+# The Goal
+The goal is to build a distribuited peer to peer database for both enterprise and social enviroment. The project is very ambitious.
