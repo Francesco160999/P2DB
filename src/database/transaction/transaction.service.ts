@@ -35,14 +35,14 @@ export class TransactionService {
         
             //if not in this node search in other nodes
             //const nodesList: any[] = require(Utilty.NODES_LIST());
-            await nodes.forEach(node => {
+            for(let node of nodes) {
                 axios.get(`${node.host}:${node.host}/transaction/${hash}`).then((data: any) => {
                     if(data == null) return;
 
                     Utilty.fetchTransaction(data);
                     return Promise.resolve(data);
                 });
-            })
+            }
 
             return Promise.resolve(undefined);
         });
