@@ -18,21 +18,25 @@ export class TransactionService {
         let hfiles: string[];
         await readdir(hashPath, (err, files) => { hfiles = files; if(err) console.log(err); });
 
-        await hfiles.forEach(file => {
-            if(hash === file){
-                Promise.resolve(require(`../${hashPath}/${file}`));
-            }
-        })
+        if(hfiles != null) {
+            await hfiles.forEach(file => {
+                if(hash === file){
+                    return Promise.resolve(require(`../${hashPath}/${file}`));
+                }
+            })
+        }
        
         //if not in this node search in other nodes
         let nodesList: any[] = require(Utilty.NODES_LIST());
         await nodesList.forEach(node => {
             axios.get(`${node.host}:${node.host}/transaction/${hash}`).then((data: any) => {
+                if(data == null) return;
+
                 Utilty.fetchTransaction(data);
-                Promise.resolve(data);
+                return Promise.resolve(data);
             });
         })
 
-        return undefined;
+        return Promise.resolve(undefined);
     }
 }
