@@ -1,3 +1,7 @@
+
+<a href="http://francescoscassillo.com/nodetondb/logo-nodeton.PNG" rel="logo">![Foo](http://francescoscassillo.com/nodetondb/logo-nodeton.PNG)</a>
+
+
 # Working in progres
 The current project is currently under developlment, if you want to known more about this project or you want to contribute contact me.
 I would very appreciete advice and proposal, thank you!
