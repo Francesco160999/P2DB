@@ -1,5 +1,5 @@
 import { ITransaction } from "src/database/transaction/transaction.interface";
-import { Column, Entity } from "typeorm";
+import { Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity()
 export class TransactionModel implements ITransaction {
@@ -13,6 +13,6 @@ export class TransactionModel implements ITransaction {
     protocol: any;
     @Column()
     body: any;
-    @Column()
+    @PrimaryColumn()
     signature: string;
 }
