@@ -1,6 +1,14 @@
 
 <a href="http://francescoscassillo.com/nodetondb/logo-nodeton.PNG" rel="logo">![Foo](http://francescoscassillo.com/nodetondb/logo-nodeton.PNG)</a>
 
+# Support
+**BTC** 323LU8WCCZFHgk6zbmRQTnadyyTUQm5uAi
+
+**ETH** 0xDb4281670BC5A26343374639b39D96FC84439B15
+
+**Paypal** paypal.me/francescoscassillo
+
+
 
 # Working in progres
 The current project is currently under developlment, if you want to known more about this project or you want to contribute contact me.
