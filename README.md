@@ -6,7 +6,7 @@
 
 **Ethereum** 0xDb4281670BC5A26343374639b39D96FC84439B15
 
-**Paypal** paypal.me/francescoscassillo
+**Paypal** https://www.paypal.me/francescoscassillo
 
 **Patreon** https://www.patreon.com/nodetondb
 
