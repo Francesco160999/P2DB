@@ -8,6 +8,8 @@
 
 **Paypal** paypal.me/francescoscassillo
 
+**Patreon** https://www.patreon.com/nodetondb
+
 
 
 # Working in progres
