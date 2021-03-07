@@ -6,10 +6,24 @@ import { PeerController } from './peer/peer.controller';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-        PeerModule, ],
+        PeerModule,
+        TypeOrmModule.forRoot({
+          type: 'sqlite',
+          cache: true,
+          
+          host: 'localhost',
+          port: 3306,
+          username: 'root',
+          password: 'root',
+          database: 'database',
+          entities: [],
+          synchronize: true,
+        }),
+      ],
   controllers: [
         TransactionController, 
         PeerController, AppController],

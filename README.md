@@ -30,5 +30,5 @@ The transaction protocol (or transaction header) is a string that describe the p
 Other examples:
  > es. RSA512#TEXT#MSG
  - RSA512 mean that is RSA encripted
- - TEXT mean that the body is a plain text (as described before, RSA encipted)
- - MSG is an additinal aribtrary infomarion
+ - TEXT mean that the body is a plain text (as described before, RSA encripted)
+ - MSG is an additinal aribtrary infomation
