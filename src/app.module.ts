@@ -19,7 +19,9 @@ import { Connection } from 'typeorm';
           database: '/src/data/database.db',
           entities: [TransactionModel],
           synchronize: true,
+          autoLoadEntities: true
         }),
+        TypeOrmModule.forFeature([TransactionModel]),
       ],
   controllers: [
         TransactionController, 
@@ -27,6 +29,9 @@ import { Connection } from 'typeorm';
   providers: [
         TransactionService, 
         PeerService, AppService],
+  exports: [
+    TypeOrmModule
+  ]
 })
 export class AppModule {
   constructor(private connection: Connection) {}

@@ -1,6 +1,7 @@
 import { ITransaction } from "src/database/transaction/transaction.interface";
-import { PrimaryGeneratedColumn, Column } from "typeorm";
+import { Column, Entity } from "typeorm";
 
+@Entity()
 export class TransactionModel implements ITransaction {
     @Column()
     timestamp: number;

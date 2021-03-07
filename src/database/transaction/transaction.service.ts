@@ -11,7 +11,9 @@ import { TransactionModel } from '../../models/transaction.model';
 @Injectable()
 export class TransactionService {
 
-    constructor(private transactionRepository: Repository<TransactionModel>) { }
+    constructor(
+        @InjectRepository(TransactionModel)
+        private transactionRepository: Repository<TransactionModel>) { }
 
     async createTransaction(transaction: ITransaction): Promise<ITransaction | undefined> {
         let res = await this.transactionRepository.create(transaction);
