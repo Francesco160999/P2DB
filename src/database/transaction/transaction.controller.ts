@@ -8,12 +8,17 @@ export class TransactionController {
     constructor(private readonly transactionService: TransactionService) { }
 
     @Post('create')
-    createTransaction(@Body() transaction: ITransaction){
-        return this.transactionService.createTransaction(transaction);
+    async createTransaction(@Body() transaction: ITransaction): Promise<ITransaction> {
+        return await this.transactionService.createTransaction(transaction);
     }
 
-    @Get(':hash')
+    @Get('get/:hash')
     async getTransaction(@Param('hash') hash: string): Promise<ITransaction>{
         return await this.transactionService.getTransaction(hash);
+    }
+
+    @Post('query')
+    async queryTransaction(@Body() query:any): Promise<ITransaction[]> {
+        return await this.transactionService.queryTransaction(query);
     }
 }

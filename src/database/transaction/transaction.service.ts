@@ -13,16 +13,12 @@ export class TransactionService {
 
     constructor(private transactionRepository: Repository<TransactionModel>) { }
 
-    createTransaction(transaction: ITransaction) {
-
+    async createTransaction(transaction: ITransaction): Promise<ITransaction | undefined> {
+        let res = await this.transactionRepository.create(transaction);
+        return res;
     }
 
     async getTransaction(hash :string): Promise<TransactionModel | undefined> {
-        const path = require("path");
-        
-        let hashPath: string = "../"+Utilty.TRANSACTIONS_PATH();
-        let hfiles: string[];
-        hfiles = readdirSync(path.resolve(__dirname, hashPath));
         //found if the hash is in the current node
         let transaction = await this.transactionRepository.findOne({signature: hash});
         if(transaction != null){
@@ -38,5 +34,9 @@ export class TransactionService {
                 return Promise.resolve(data);
             });
         }
+    }
+
+    async queryTransaction(query: any): Promise<ITransaction[]>{
+        return await this.transactionRepository.find(query);
     }
 }
