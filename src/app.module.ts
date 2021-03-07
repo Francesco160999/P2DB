@@ -19,7 +19,11 @@ import { Connection } from 'typeorm';
           database: '/src/data/database.db',
           entities: [TransactionModel],
           synchronize: true,
-          autoLoadEntities: true
+          autoLoadEntities: true,
+          migrations: ["migration/*.js"],
+          cli: {
+            migrationsDir: "migration"
+          }
         }),
         TypeOrmModule.forFeature([TransactionModel]),
       ],

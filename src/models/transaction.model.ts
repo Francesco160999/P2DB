@@ -10,9 +10,9 @@ export class TransactionModel implements ITransaction {
     @Column()
     recepient: string;
     @Column()
-    protocol: any;
+    protocol: string;
     @Column()
-    body: any;
+    body: string;
     @PrimaryColumn()
     signature: string;
 }
