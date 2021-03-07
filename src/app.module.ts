@@ -7,6 +7,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TransactionModel } from './models/transaction.model';
+import { Connection } from 'typeorm';
 
 @Module({
   imports: [
@@ -14,13 +16,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         TypeOrmModule.forRoot({
           type: 'sqlite',
           cache: true,
-          
-          host: 'localhost',
-          port: 3306,
-          username: 'root',
-          password: 'root',
-          database: 'database',
-          entities: [],
+          database: '/src/data/database.db',
+          entities: [TransactionModel],
           synchronize: true,
         }),
       ],
@@ -31,4 +28,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         TransactionService, 
         PeerService, AppService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private connection: Connection) {}
+}
